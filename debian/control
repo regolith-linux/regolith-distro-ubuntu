@@ -1,0 +1,26 @@
+Source: regolith-distro-ubuntu
+Section: x11
+Priority: optional
+Maintainer: Ken Gilmer <kgilmer@gmail.com>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.2
+Homepage: https://github.com/regolith-linux/regolith-system
+Vcs-Git: https://github.com/regolith-linux/regolith-system.git
+
+Package: regolith-distro-ubuntu
+Architecture: any
+Depends: ${misc:Depends},
+    gnome-system-tools,
+    gsettings-ubuntu-schemas,
+    ibus,    
+    network-manager-config-connectivity-ubuntu,
+    regolith-desktop | regolith-desktop-meta,
+    lightdm | x-display-manager,
+    xinit
+Recommends: regolith-lightdm-config,
+    plymouth-theme-regolith,
+    libavahi-ui-gtk3-0
+Conflicts: indicator-application
+Multi-Arch: foreign
+Description: Metapackage that describes a distribution with Regolith
+ This package installs a complete Regolith system on Ubuntu, used for ISO generation. 
